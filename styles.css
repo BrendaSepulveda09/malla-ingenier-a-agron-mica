@@ -3,11 +3,19 @@ body {
   background: #faf7fb;
 }
 
+.malla {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
 .semestre {
+  width: 220px;
   border: 2px solid #ddd;
   padding: 10px;
-  margin-bottom: 20px;
-  width: fit-content;
+  border-radius: 10px;
+  background: #fff;
 }
 
 .ramo {
