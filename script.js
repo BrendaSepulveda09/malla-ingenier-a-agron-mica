@@ -35,7 +35,13 @@ function actualizarBloqueos() {
     const prereq = ramo.dataset.prereq;
     if (!prereq) return;
 
-    if (!aprobados.includes(prereq)) {
+    const prereqs = prereq.split(',');
+
+    const habilitado = prereqs.every(p =>
+      aprobados.includes(p)
+    );
+
+    if (!habilitado) {
       ramo.classList.add('bloqueado');
       ramo.classList.remove('aprobado');
     } else {
@@ -43,3 +49,4 @@ function actualizarBloqueos() {
     }
   });
 }
+
